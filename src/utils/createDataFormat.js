@@ -8,4 +8,5 @@ var createDataFormat  =(data)=>{
     console.log(dataArray);
     return dataArray;
 }
+
 export default createDataFormat;
