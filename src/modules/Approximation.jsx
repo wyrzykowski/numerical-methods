@@ -28,7 +28,7 @@ class Approximation extends DrawLinearChart {
 
 
     calculateApproximate(){
-        var dataApprox = doApproximation( this.state.data_to_approximate,this.state.value);
+        var dataApprox = doApproximation( this.state.data_to_approximate,this.state.value);//przjmuje :obiek: {x:tablica xsów,y:tablica Ygreków,point np 0.1)
         var dataApproxFormated=createDataFormat(dataApprox);
         this.setState({data_2:dataApproxFormated},()=>{
             this.updateCanvas()

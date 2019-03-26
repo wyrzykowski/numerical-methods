@@ -9,8 +9,8 @@ class DrawLinearChart extends Component {
     }
     updateCanvas() {
 
-        var dataApprox = this.state.data_1;
-        var dataFuncion = this.state.data_2;
+        var dataApprox = this.state.data_2;
+        var dataFuncion = this.state.data_1;
 
 
         var ctx = this.refs.canvas.getContext('2d');
