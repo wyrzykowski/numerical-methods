@@ -6,6 +6,7 @@ import Approximation from "./modules/Approximation";
 import Lagrangeinterpolation from "./modules/Lagrangeinterpolation";
 import Numericalmethod from "./modules/Numericalmethod";
 import NewtonsDividedDifferenceInterpolation from "./modules/Newtons_divided_difference_interpolation";
+import Quadrature from "./modules/Quadrature";
 
 
 class App extends Component {
@@ -33,6 +34,9 @@ class App extends Component {
                       <li className="nav-item">
                           <Link className="nav-link" to="/newton-interpolation">Newton's divided difference interpolation</Link>
                       </li>
+                      <li className="nav-item">
+                          <Link className="nav-link" to="/quadrature">Quadrature</Link>
+                      </li>
 
                   </ul>
 
@@ -53,6 +57,7 @@ class App extends Component {
               <Route path="/approximation" component={Approximation}/>
               <Route path="/larange-interpolation" component={Lagrangeinterpolation}/>
               <Route path="/newton-interpolation" component={NewtonsDividedDifferenceInterpolation}/>
+              <Route path="/quadrature" component={Quadrature}/>
 
           </Switch>
       </div>

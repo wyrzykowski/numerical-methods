@@ -7,8 +7,14 @@ var splitDataUtils=(data)=>{
 
 x.map((element, index)=>{
   x[index]=parseFloat(element);
-  y[index]=parseFloat(y[index])
 })
+
+    y.map((element, index)=>{
+        y[index]=parseFloat(y[index])
+    })
+
+
+
 
     return {x,y};
 }
