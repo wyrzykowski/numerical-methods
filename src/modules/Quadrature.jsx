@@ -60,7 +60,7 @@ class Quadrature extends Component {
     calculateQuadratureNewtonCotesSimpson(){
         const points = this.state.points;
         const hornerResult = this.calculate();
-console.log("TESUJEEE",hornerResult[35])
+//console.log("TESUJEEE",hornerResult[35])
 
 
         var quadratureResult = 0;
@@ -71,20 +71,19 @@ console.log("TESUJEEE",hornerResult[35])
                 const el = ((points[index]+points[index+1])/2);
                // console.log("el",el)
                 const ress=this.isNearEnough(el);
-               console.log("near",ress)
+              // console.log("el: ",el,"near",ress,"INDEX: ",index)
               //  console.log("jaki x",(points[index]+points[index+1])/2)
                 //console.log("jaki index",Math.abs(Math.round((points[index]+points[index+1])/2)))
                 //console.log("dziala",hornerResult[(points[index]+points[index+1])/2])
-                console.log("sad",((points[index+1]-points[index])/6)*(hornerResult[index]+(4*hornerResult[ress])+hornerResult[index+1]));
-                return simposnRes = ((points[index+1]-points[index])/6)*(hornerResult[index]+(4*hornerResult[index])+hornerResult[index+1]);
-                console.log("sum",sum);
+               // console.log("sad",((points[index+1]-points[index])/6)*(hornerResult[index]+(4*hornerResult[ress])+hornerResult[index+1]));
+                simposnRes += ((points[index+1]-points[index])/6)*(hornerResult[index]+(4*hornerResult[ress])+hornerResult[index+1]);
+              //  console.log("sum",sum);
 
-                console.log("Simpson:",simposnRes+quadratureResult);
+              //  console.log("Simpson:",simposnRes+quadratureResult);
 
             }
         })
-        console.log("tab",quadratureArrayResult)
-        console.log("QuadratureNewtonCotesSimpson:",quadratureResult);
+        console.log("Simson res:",simposnRes);
         //console.log("quadrature array result",quadratureArrayResult)
         return quadratureResult;
     }
